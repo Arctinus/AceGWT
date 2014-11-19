@@ -586,4 +586,14 @@ public class AceEditor extends Composite implements RequiresResize, HasText, Tak
 		
 		return new AceCompletionCallbackImpl(jsCallback);
 	}
+	
+	public native void undo() /*-{
+		var editor = this.@edu.ycp.cs.dh.acegwt.client.ace.AceEditor::editor;
+		editor.undo();
+	}-*/;
+	
+	public native void redo()  /*-{
+		var editor = this.@edu.ycp.cs.dh.acegwt.client.ace.AceEditor::editor;
+		editor.redo();
+	}-*/;
 }
